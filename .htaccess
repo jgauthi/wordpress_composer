@@ -1,0 +1,45 @@
+# Wordpress protection
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+	RewriteBase /
+
+	# Block wp-includes folder and files
+	RewriteRule ^(app/)?wp-admin/includes/ - [F,L]
+	RewriteRule !^(app/)?wp-includes/ - [S=3]
+	RewriteRule ^(app/)?wp-includes/[^/]+\.php$ - [F,L]
+	RewriteRule ^(app/)?wp-includes/js/tinymce/langs/.+\.php - [F,L]
+	RewriteRule ^(app/)?wp-includes/theme-compat/ - [F,L]
+
+	# Deny access to some locations & documentation files
+	RewriteRule ^/?(\.git|logs|temp|tests|program\/(include|lib|localization|steps)) - [F]
+	RewriteRule ^/?.*\.(md|sql|bin|config|log|tmp|test|yml) - [F]
+	RewriteRule /?(wp-config.php|composer\.json-dist|composer\.json|composer\.lock|package\.xml|Dockerfile|(changelog|readme|license)\.txt)$ - [F]
+
+	# protect from sql injection
+	RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+	RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+	RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+</IfModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Restrict user for path disclosure
+Options All -Indexes
+
+# Deny access to all .htaccess files
+<files ~ "^.*\.([Hh][Tt][Aa])">
+	order allow,deny
+	deny from all
+	satisfy all
+</files>

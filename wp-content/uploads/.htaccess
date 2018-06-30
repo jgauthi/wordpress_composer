@@ -1,0 +1,8 @@
+### Désactiver php via htaccess (utile pour des dossiers d'upload)
+RemoveHandler .php .phtml .php3
+RemoveType .php .phtml .php3
+
+# Can't disable php flag on apache CGI
+<IfModule php5_module>
+	php_flag engine off
+</IfModule>

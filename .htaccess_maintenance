@@ -1,0 +1,40 @@
+RewriteEngine On
+
+# Modifier la ligne suivante en ajoutant l'IP de la/les machine(s)
+# autorisée(s) à visualiser le site durant la maintenance.
+# (Ajouter autant de lignes qu'il y a d'IP à autoriser)
+RewriteCond %{REMOTE_HOST} !^80\.12\.85\.147
+RewriteCond %{REMOTE_HOST} !^10.*
+
+# URL qui sera impactée durant la maintenance
+RewriteCond %{HTTP_HOST} ^wpdomain.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.wpdomain.com$
+
+# Ceci est la liste des fichiers ignorés. Cela permet de
+# conserver l'accès à ces fichiers pour les afficher durant
+# la maintenance.
+RewriteCond %{REQUEST_URI} !/maintenance\.php$
+
+# Réécrit n'importe quelle requête vers la page de maintenance.
+# La directive R=302 envoi au navigateur (et aux moteurs de recherche)
+# le message que cette redirection est temporaire.
+RewriteRule \.*$ /maintenance.php [R=302,L]
+
+# Règles WordPress permettant aux IP autorisées de naviguer
+# normalement sur le site.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+
+    # Block wp-includes folder and files
+    RewriteRule ^wp-admin/includes/ - [F,L]
+    RewriteRule !^wp-includes/ - [S=3]
+    RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+    RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+    RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+# END WordPress
