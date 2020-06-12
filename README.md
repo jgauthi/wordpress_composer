@@ -37,5 +37,9 @@ To stop maintenance mode, reverse rename .htaccess files.
 You can add proxy support on `wp-config.php`: Uncomment the lines "WP_PROXY_*" and complete values.
 
 
+## WP Rocket config
+An example json file can be use on import rocket settings, on "/wp-content/wp-rocket-config/wp-rocket-settings-2017-10-13-59e0dab973327.json". **Don't forget** to remove this file before deploy this plugin.
+
+
 ## Done
 Enjoy coding or just viewing the site

@@ -4,12 +4,14 @@
 	"description": "Wordpress project with composer",
 	"minimum-stability": "stable",
 	"repositories": [
-		{ "type": "composer", "url": "https://wpackagist.org" }
+		{ "type": "composer", "url": "https://wpackagist.org" },
+    { "type": "git", "url": "git@bitbucket.org:gauthij/wp-rocket.git" }
 	],
 	"require": {
 		"php": ">=5.6.0",
 		"fancyguy/webroot-installer": "1.1.0",
 		"johnpbloch/wordpress": "5.*",
+    "gauthij/wp-rocket.git": "dev-master",
 		"wpackagist-plugin/admin-menu-tree-page-view": "2.*",
 		"wpackagist-plugin/crop-thumbnails": "*",
 		"wpackagist-plugin/enhanced-media-library": "2.*",
