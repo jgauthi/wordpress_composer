@@ -7,15 +7,15 @@
 		{ "type": "composer", "url": "https://wpackagist.org" }
 	],
 	"require": {
-		"php": ">=5.4.0",
+		"php": ">=5.6.0",
 		"fancyguy/webroot-installer": "1.1.0",
-		"johnpbloch/wordpress": "4.*",
+		"johnpbloch/wordpress": "5.*",
 		"wpackagist-plugin/admin-menu-tree-page-view": "2.*",
 		"wpackagist-plugin/crop-thumbnails": "*",
 		"wpackagist-plugin/enhanced-media-library": "2.*",
 		"wpackagist-plugin/filenames-to-latin": "2.*",
 		"wpackagist-plugin/simple-login-lockdown": "1.*",
-		"wpackagist-plugin/wordpress-seo": "~7"
+		"wpackagist-plugin/wordpress-seo": "~14"
 	},
 	"require-dev": {
 		"wpackagist-plugin/ari-adminer" : "*",

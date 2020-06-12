@@ -7,4 +7,3 @@
  */
 
 require_once(__DIR__.'/app/wp-load.php');
-?>

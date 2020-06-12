@@ -95,6 +95,3 @@ define('EMPTY_TRASH_DAYS', 30);		// Trash Days
  *  query variable from being an issue in search results. No SEO impact.
  */
 // define('ALTERNATE_WP_CRON', true); // By default: no use, so false
-
-
-?>

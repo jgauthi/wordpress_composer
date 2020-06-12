@@ -15,7 +15,6 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
 define('DB_NAME', 'wordpress');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
@@ -74,5 +73,3 @@ if(empty($_SERVER['HTTP_HOST']))
 // Sets up WordPress vars and included files.
 require_once(__DIR__ . '/wp-config-server.php');
 require_once(ABSPATH . 'wp-settings.php');
-
-?>

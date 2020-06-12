@@ -1,14 +1,13 @@
 # Wordpress with composer project
 
 ## Installation
-
 If composer is not installed, install it following the instructions for [Linux/Unix/OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) or [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows).
 
 Clone project into your own directory.
 Once done, run `composer install`. You can add more wordpress plugin by completing the composer.json (composer require wpackagist-plugin/plugin-name).
 
-## Configuration
 
+## Configuration
 Rename file wp-config.default.php to wp-config.php and modify it with your own values for the following variables :
 
 * Database variables
@@ -23,7 +22,6 @@ You can complete the wordpress smtp configuration: Uncomment the lines SMTP_* an
 
 
 ## Maintenance mode
-
 To pass the site into maintenance mode,
 
 * Rename file: .htaccess to .htaccess_standby
@@ -36,10 +34,8 @@ To stop maintenance mode, reverse rename .htaccess files.
 
 
 ## Proxy support
-
 You can add proxy support on `wp-config.php`: Uncomment the lines "WP_PROXY_*" and complete values.
 
 
 ## Done
-
 Enjoy coding or just viewing the site
