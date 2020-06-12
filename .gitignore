@@ -22,6 +22,10 @@ wp-content/upgrade
 wp-content/uploads/*
 !wp-content/uploads/.htaccess
 !wp-content/mu-plugins/disallow-indexing.php
+wp-content/cache/
+!wp-content/cache/.gitkeep
+wp-content/w3tc-config/
+!wp-content/w3tc-config/.config-default
 
 # Vendor (e.g. Composer)
 vendor/*

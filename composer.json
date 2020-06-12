@@ -15,6 +15,7 @@
 		"wpackagist-plugin/enhanced-media-library": "2.*",
 		"wpackagist-plugin/filenames-to-latin": "2.*",
 		"wpackagist-plugin/simple-login-lockdown": "1.*",
+    "wpackagist-plugin/w3-total-cache": "0.9.4.1",
 		"wpackagist-plugin/wordpress-seo": "~14"
 	},
 	"require-dev": {

@@ -21,6 +21,16 @@ Rename file wp-config.default.php to wp-config.php and modify it with your own v
 You can complete the wordpress smtp configuration: Uncomment the lines SMTP_* and complete the values.
 
 
+## W3 Total Cache
+
+Installation:
+
+* Active the plugin W3 Total cache
+* Import "wp-content/w3tc-config/.config-default" in Back Office: Performance > General Settings > Import / Export Settings > Import configuration.
+* Add theme javascript / css files in Minify settings > file management
+* Flush cache
+
+
 ## Maintenance mode
 To pass the site into maintenance mode,
 
