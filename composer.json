@@ -9,7 +9,7 @@
 	"require": {
 		"php": ">=5.6.0",
 		"fancyguy/webroot-installer": "1.1.0",
-		"johnpbloch/wordpress": "5.*",
+		"johnpbloch/wordpress": "4.7.*",
 		"wpackagist-plugin/admin-menu-tree-page-view": "2.*",
 		"wpackagist-plugin/crop-thumbnails": "*",
 		"wpackagist-plugin/enhanced-media-library": "2.*",

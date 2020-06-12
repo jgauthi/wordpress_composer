@@ -21,6 +21,13 @@ Rename file wp-config.default.php to wp-config.php and modify it with your own v
 You can complete the wordpress smtp configuration: Uncomment the lines SMTP_* and complete the values.
 
 
+## Wordpress version
+This project must be compatible with IE8, the latest version of Wordpress compatible with this browser is the 4.7 release.
+
+For more information:
+https://make.wordpress.org/core/2017/04/23/target-browser-coverage/
+
+
 ## Maintenance mode
 To pass the site into maintenance mode,
 
