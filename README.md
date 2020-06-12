@@ -21,6 +21,18 @@ Rename file wp-config.default.php to wp-config.php and modify it with your own v
 You can complete the wordpress smtp configuration: Uncomment the lines SMTP_* and complete the values.
 
 
+## Multisite
+On Wordpress BackOffice, go to tools > Network to create multisite network. You must turn off extensions before do this operation.
+
+Tips: For site use plugins specifics functions (ACF/Polylang/...), switch the custom current theme to classic wordpress theme during this migration to avoid php error (function not exists...).
+
+After install and the sites creation, go to BackOffice > Network
+* Settings > Domain mapping, uncheck all options, then check options 2 (Permanent redirect ) and 3 (User domain mapping page).
+* Settings > Domain, add all sites except the primary.
+* Extensions > Enable extensions that will be used on ALL sites (you can turn on specific(s) plugin(s) by site settings extensions)
+* Theme > Theme list, enable theme that will be used on any site
+
+
 ## Maintenance mode
 To pass the site into maintenance mode,
 

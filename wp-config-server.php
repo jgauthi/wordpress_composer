@@ -26,6 +26,16 @@ define('WPCF7_LOAD_CSS', false);
 define('WP_CONTENT_DIR', __DIR__ . '/wp-content');
 define('WP_CONTENT_URL', '/wp-content');
 
+// Multisite
+define('WP_ALLOW_MULTISITE', true);
+define('SUNRISE', 'on');
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', true);
+// define('DOMAIN_CURRENT_SITE', 'host.domain');
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+
 // Absolute path to the WordPress directory
 if(!defined('ABSPATH'))
 	define('ABSPATH', __DIR__ . '/app/');

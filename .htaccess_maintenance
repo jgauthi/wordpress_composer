@@ -26,15 +26,15 @@ RewriteRule \.*$ /maintenance.php [R=302,L]
     RewriteEngine On
     RewriteBase /
     RewriteRule ^index\.php$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.php [L]
 
-    # Block wp-includes folder and files
-    RewriteRule ^wp-admin/includes/ - [F,L]
-    RewriteRule !^wp-includes/ - [S=3]
-    RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
-    RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
-    RewriteRule ^wp-includes/theme-compat/ - [F,L]
+    # add a trailing slash to /wp-admin
+    RewriteRule ^(app/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^(wp-(content|admin|includes).*) app/$1 [L]
+    RewriteRule ^(.*\.php)$ app/$1 [L]
+    RewriteRule . index.php [L]
 </IfModule>
 # END WordPress
