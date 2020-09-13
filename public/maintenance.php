@@ -1,9 +1,9 @@
 <?php
-$protocol = (( 'HTTP/1.1' == $_SERVER['SERVER_PROTOCOL'] ) ? 'HTTP/1.1' : 'HTTP/1.0');
+$protocol = (('HTTP/1.1' == $_SERVER['SERVER_PROTOCOL']) ? 'HTTP/1.1' : 'HTTP/1.0');
 
-header( "{$protocol} 503 Service Unavailable", true, 503 );
-header( 'Content-Type: text/html; charset=utf-8' );
-header( 'Retry-After: 3600' );
+header("{$protocol} 503 Service Unavailable", true, 503);
+header('Content-Type: text/html; charset=utf-8');
+header('Retry-After: 3600');
 
 ?><!DOCTYPE html>
 <html>
