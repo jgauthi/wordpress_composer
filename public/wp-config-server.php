@@ -35,7 +35,7 @@ if(!defined('ABSPATH')) {
 /**
  * Composer Autoloader
  */
-require(__DIR__ . '/vendor/autoload.php');
+require(__DIR__ . '/../vendor/autoload.php');
 
 
 /**
@@ -55,7 +55,7 @@ if(defined('WP_DEBUG') && WP_DEBUG) {
 
 	// Debug WP functions
 	define('DEBUG_EXPORT_PATH', WP_CONTENT_DIR.'/uploads');
-	include_once __DIR__.'/vendor/jgauthi/component_debug/src/VarExportWordpress.php';
+	include_once __DIR__.'/../vendor/jgauthi/component_debug/src/VarExportWordpress.php';
 	\Jgauthi\Component\Debug\DebugHandler::init();
 
 	if(class_exists('Symfony\Component\Debug\Debug')) {

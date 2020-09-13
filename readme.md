@@ -8,7 +8,7 @@ Once done, run `composer install`. You can add more wordpress plugin by completi
 
 
 ## Configuration
-Rename file wp-config.default.php to wp-config.php and modify it with your own values for the following variables :
+Rename file `public/wp-config.default.php` to `public/wp-config.php` and modify it with your own values for the following variables :
 
 * Database variables
     * DB_NAME
@@ -19,6 +19,8 @@ Rename file wp-config.default.php to wp-config.php and modify it with your own v
     * DB_COLLATE
 
 You can complete the wordpress smtp configuration: Uncomment the lines SMTP_* and complete the values.
+
+On server configuration, set the DocumentRoot on Apache or Nginx to `public/` folder.
 
 
 ## Maintenance mode
