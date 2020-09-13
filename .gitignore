@@ -1,6 +1,6 @@
 # WordPress
-app/
-wp-config.php
+public/app/
+public/wp-config.php
 
 # WP-CLI
 db-sync
@@ -12,20 +12,20 @@ sql-dump-*.sql
 !.env.example
 
 # Application
-wp-content/languages/*
-wp-content/plugins/*
-!wp-content/plugins/.gitkeep
-wp-content/mu-plugins/*
-!wp-content/mu-plugins/.gitkeep
-wp-content/upgrade
-!wp-content/upgrade/.gitkeep
-wp-content/uploads/*
-!wp-content/uploads/.htaccess
-!wp-content/mu-plugins/disallow-indexing.php
-wp-content/cache/
-!wp-content/cache/.gitkeep
-wp-content/w3tc-config/
-!wp-content/w3tc-config/.config-default
+public/wp-content/languages/*
+public/wp-content/plugins/*
+!public/wp-content/plugins/.gitkeep
+public/wp-content/mu-plugins/*
+!public/wp-content/mu-plugins/.gitkeep
+public/wp-content/upgrade
+!public/wp-content/upgrade/.gitkeep
+public/wp-content/uploads/*
+!public/wp-content/uploads/.htaccess
+!public/wp-content/mu-plugins/disallow-indexing.php
+public/wp-content/cache/
+!public/wp-content/cache/.gitkeep
+public/wp-content/w3tc-config/
+!public/wp-content/w3tc-config/.config-default
 
 # Vendor (e.g. Composer)
 vendor/*
@@ -33,6 +33,7 @@ vendor/*
 
 # Node Package Manager
 node_modules
+public/node_modules
 
 # Vagrant
 bin
