@@ -1,35 +1,36 @@
 {
-	"name": "project/wordpress",
-	"type": "project",
-	"description": "Wordpress project with composer",
-	"minimum-stability": "stable",
-	"repositories": [
-		{ "type": "composer", "url": "https://wpackagist.org" }
-	],
-	"require": {
-		"php": ">=5.6.0",
-		"fancyguy/webroot-installer": "1.1.0",
-		"johnpbloch/wordpress": "5.*",
-		"wpackagist-plugin/admin-menu-tree-page-view": "2.*",
-		"wpackagist-plugin/crop-thumbnails": "*",
-		"wpackagist-plugin/enhanced-media-library": "2.*",
-		"wpackagist-plugin/filenames-to-latin": "2.*",
-		"wpackagist-plugin/simple-login-lockdown": "1.*",
-		"wpackagist-plugin/wordpress-seo": "~14"
-	},
-	"require-dev": {
-		"wpackagist-plugin/ari-adminer" : "*",
-		"wpackagist-plugin/filter-page-by-template": "*",
-		"wpackagist-plugin/php-compatibility-checker": "*",
-		"wpackagist-plugin/query-monitor": "*",
-		"wpackagist-plugin/wordpress-importer": "*"
-	},
-	"extra": {
-		"wordpress-install-dir": "app",
-		"installer-paths" : {
-			"wp-content/themes/{$name}/": ["type:wordpress-theme"],
-			"wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-			"wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
-		}
-	}
+  "name": "project/wordpress",
+  "type": "project",
+  "description": "Wordpress project with composer",
+  "minimum-stability": "stable",
+  "repositories": [
+    { "type": "git", "url": "git@github.com:jgauthi/component_debug.git" },
+    { "type": "composer", "url": "https://wpackagist.org" }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "fancyguy/webroot-installer": "1.1.0",
+    "johnpbloch/wordpress": "5.*",
+    "wpackagist-plugin/admin-menu-tree-page-view": "2.*",
+    "wpackagist-plugin/crop-thumbnails": "*",
+    "wpackagist-plugin/enhanced-media-library": "2.*",
+    "wpackagist-plugin/filenames-to-latin": "2.*",
+    "wpackagist-plugin/simple-login-lockdown": "1.*",
+    "wpackagist-plugin/wordpress-seo": "~14"
+  },
+  "require-dev": {
+    "jgauthi/component_debug": "*",
+    "wpackagist-plugin/filter-page-by-template": "*",
+    "wpackagist-plugin/php-compatibility-checker": "*",
+    "wpackagist-plugin/query-monitor": "*",
+    "wpackagist-plugin/wordpress-importer": "*"
+  },
+  "extra": {
+    "wordpress-install-dir": "app",
+    "installer-paths" : {
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"],
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+    }
+  }
 }

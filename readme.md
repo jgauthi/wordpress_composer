@@ -36,6 +36,9 @@ To stop maintenance mode, reverse rename .htaccess files.
 ## Proxy support
 You can add proxy support on `wp-config.php`: Uncomment the lines "WP_PROXY_*" and complete values.
 
+## Debug support
+On dev environnement, you can use the functions and features provided by the [component debug](https://github.com/jgauthi/component_debug), require `WP_DEBUG` to `true`. 
+
 
 ## Done
 Enjoy coding or just viewing the site

@@ -8,6 +8,7 @@
  *
  * @since 2.6.0
  */
+
 define('AUTH_KEY',			'?2P ?P$z~l}8xW21GcMy2Z8U=|Hk@uAJYwa//^>sN+y(s`Ag-T+_1+4cPd%,|CbB');
 define('SECURE_AUTH_KEY', 	'ng)Bs*O~daA5m6 Wp`+FyV%k*MPK b5I@NJ5(P258^pnq h5nNGb^`e6yzhF*0EE');
 define('LOGGED_IN_KEY',		'10x2lU!{@_efo|(5x{-3A()?OTis|FRSe# Sw}wU]x[J>E:e:<5m^tWOwm+S[M0^');
@@ -27,8 +28,9 @@ define('WP_CONTENT_DIR', __DIR__ . '/wp-content');
 define('WP_CONTENT_URL', '/wp-content');
 
 // Absolute path to the WordPress directory
-if(!defined('ABSPATH'))
+if(!defined('ABSPATH')) {
 	define('ABSPATH', __DIR__ . '/app/');
+}
 
 /**
  * Composer Autoloader
@@ -43,29 +45,36 @@ require(__DIR__ . '/vendor/autoload.php');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-if(defined('WP_DEBUG') && WP_DEBUG)
-{
+if(defined('WP_DEBUG') && WP_DEBUG) {
 	// Debug mode
 	ini_set('display_errors', true);
 	ini_set('error_reporting', E_ALL & ~E_NOTICE);
 	define('WP_DEBUG_LOG', true);
 	define('WP_DEBUG_DISPLAY', true);
 	define('SCRIPT_DEBUG', true);
-	if(class_exists('Symfony\Component\Debug\Debug'))
+
+	// Debug WP functions
+	define('DEBUG_EXPORT_PATH', WP_CONTENT_DIR.'/uploads');
+	include_once __DIR__.'/vendor/jgauthi/component_debug/src/VarExportWordpress.php';
+	\Jgauthi\Component\Debug\DebugHandler::init();
+
+	if(class_exists('Symfony\Component\Debug\Debug')) {
 		\Symfony\Component\Debug\Debug::enable(ini_get('error_reporting'));
+		\Jgauthi\Component\Debug\VarDumperServer::init();
+	}
 
 	// Desactive auto update + cache
 	define('WP_AUTO_UPDATE_CORE', false);
-}
-else
-{
+
+} else {
 	define('WP_AUTO_UPDATE_CORE', 'minor');	// Auto updates
 	define('ACF_LITE', true); // Hide ACF conf
 }
 
 // Localhost manual update
-if($_SERVER['REMOTE_ADDR'] == '127.0.0.1')
+if($_SERVER['REMOTE_ADDR'] == '127.0.0.1') {
 	define('FS_METHOD', 'direct');
+}
 
 // Wordpress setting
 define('WP_POST_REVISIONS', 10);	// Specify maximum number of Revisions
