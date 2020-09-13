@@ -14,7 +14,7 @@
 	# Deny access to some locations & documentation files
 	RewriteRule ^/?(\.git|logs|temp|tests|program\/(include|lib|localization|steps)) - [F]
 	RewriteRule ^/?.*\.(md|sql|bin|config|log|tmp|test|yml) - [F]
-	RewriteRule /?(wp-config.php|composer\.json-dist|composer\.json|composer\.lock|package\.xml|Dockerfile|(changelog|readme|license)\.txt)$ - [F]
+	RewriteRule /?(wp-config.php|package\.xml|(changelog|license)\.txt)$ - [F]
 
 	# protect from sql injection
 	RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
