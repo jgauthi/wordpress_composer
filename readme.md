@@ -4,7 +4,9 @@
 If composer is not installed, install it following the instructions for [Linux/Unix/OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) or [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows).
 
 Clone project into your own directory.
-Once done, run `composer install`. You can add more wordpress plugin by completing the composer.json (composer require wpackagist-plugin/plugin-name).
+Once done, run `composer install` or `make install` (if [wp-cli](https://wp-cli.org) is installed). You can add more wordpress plugin by completing the composer.json (composer require wpackagist-plugin/plugin-name).
+
+_(Optional)_ For install the `make` command: On linux, install with `sudo apt install build-essential`. On Windows, [see here](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows/54086635).
 
 
 ## Configuration

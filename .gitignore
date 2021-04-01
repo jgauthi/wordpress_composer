@@ -13,19 +13,17 @@ sql-dump-*.sql
 
 # Application
 public/wp-content/languages/*
-public/wp-content/plugins/*
 !public/wp-content/plugins/.gitkeep
-public/wp-content/mu-plugins/*
-!public/wp-content/mu-plugins/.gitkeep
-public/wp-content/upgrade
-!public/wp-content/upgrade/.gitkeep
-public/wp-content/uploads/*
-!public/wp-content/uploads/.htaccess
+public/wp-content/plugins/*
 !public/wp-content/mu-plugins/disallow-indexing.php
+public/wp-content/mu-plugins/*
+!public/wp-content/upgrade/.gitkeep
+public/wp-content/upgrade
+!public/wp-content/uploads/.htaccess
+/public/wp-content/uploads/
 
 # Vendor (e.g. Composer)
-vendor/*
-!vendor/.gitkeep
+vendor/
 
 # Node Package Manager
 node_modules

@@ -16,7 +16,7 @@
     "wpackagist-plugin/enhanced-media-library": "2.*",
     "wpackagist-plugin/filenames-to-latin": "2.*",
     "wpackagist-plugin/simple-login-lockdown": "1.*",
-    "wpackagist-plugin/wordpress-seo": "~14"
+    "wpackagist-plugin/wordpress-seo": "~16"
   },
   "require-dev": {
     "jgauthi/component_debug": "*",
@@ -26,7 +26,7 @@
     "wpackagist-plugin/wordpress-importer": "*"
   },
   "suggest": {
-    "wp-cli/wp-cli-bundle": "WP-CLI is the command-line interface for WordPress."
+    "wp-cli/wp-cli-bundle": "WP-CLI is the command-line interface for WordPress, require for Makefile or local Dev."
   },
   "extra": {
     "wordpress-install-dir": "public/app",
