@@ -29,7 +29,7 @@
     "wp-cli/wp-cli-bundle": "WP-CLI is the command-line interface for WordPress."
   },
   "extra": {
-    "wordpress-install-dir": "app",
+    "wordpress-install-dir": "public/app",
     "installer-paths" : {
       "public/wp-content/themes/{$name}/": ["type:wordpress-theme"],
       "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
