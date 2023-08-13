@@ -9,23 +9,23 @@
  * @since 2.6.0
  */
 
-define('AUTH_KEY',          '?2P ?P$z~l}8xW21GcMy2Z8U=|Hk@uAJYwa//^>sN+y(s`Ag-T+_1+4cPd%,|CbB');
-define('SECURE_AUTH_KEY',   'ng)Bs*O~daA5m6 Wp`+FyV%k*MPK b5I@NJ5(P258^pnq h5nNGb^`e6yzhF*0EE');
-define('LOGGED_IN_KEY',     '10x2lU!{@_efo|(5x{-3A()?OTis|FRSe# Sw}wU]x[J>E:e:<5m^tWOwm+S[M0^');
-define('NONCE_KEY',         'n{.;~gk&^5JE=w7y|)ewK}}_jHt3;| Md2hH}H6TCh<+?=;a/QhW*Q719Yr,)3?2');
-define('AUTH_SALT',         ')-b|K!IVgF,S6bf#I4DU27Fo(?f_Fkd|+g9=e|@ot6|h|wKmM[1b$dFIumW#PolQ');
-define('SECURE_AUTH_SALT',  'I68ArEMC@0@Ns y:B*GT#N^{ocNy$Rma ,nD2%ezvR:J|vKAI:/#;RRdWmZ20l5L');
-define('LOGGED_IN_SALT',    '2{EYF{HRh4;QLQc-Y16Z5]a#_{553#FmxgJZt.Z%7TG&jZ25oS3+e00/?UCd|P?5');
-define('NONCE_SALT',        '_+b8Cer4eNAWS`;Y9U;`_;Y#2 yWBKgmpbdLD=t.JBr%=5} PO^52f90 Cj>/6g5');
+const AUTH_KEY = '?2P ?P$z~l}8xW21GcMy2Z8U=|Hk@uAJYwa//^>sN+y(s`Ag-T+_1+4cPd%,|CbB';
+const SECURE_AUTH_KEY = 'ng)Bs*O~daA5m6 Wp`+FyV%k*MPK b5I@NJ5(P258^pnq h5nNGb^`e6yzhF*0EE';
+const LOGGED_IN_KEY = '10x2lU!{@_efo|(5x{-3A()?OTis|FRSe# Sw}wU]x[J>E:e:<5m^tWOwm+S[M0^';
+const NONCE_KEY = 'n{.;~gk&^5JE=w7y|)ewK}}_jHt3;| Md2hH}H6TCh<+?=;a/QhW*Q719Yr,)3?2';
+const AUTH_SALT = ')-b|K!IVgF,S6bf#I4DU27Fo(?f_Fkd|+g9=e|@ot6|h|wKmM[1b$dFIumW#PolQ';
+const SECURE_AUTH_SALT = 'I68ArEMC@0@Ns y:B*GT#N^{ocNy$Rma ,nD2%ezvR:J|vKAI:/#;RRdWmZ20l5L';
+const LOGGED_IN_SALT = '2{EYF{HRh4;QLQc-Y16Z5]a#_{553#FmxgJZt.Z%7TG&jZ25oS3+e00/?UCd|P?5';
+const NONCE_SALT = '_+b8Cer4eNAWS`;Y9U;`_;Y#2 yWBKgmpbdLD=t.JBr%=5} PO^52f90 Cj>/6g5';
 
 // Contactform7 - Loading JavaScript and Stylesheet Only When it is Necessary (Controlling Behavior by Setting Constants)
 //	http://contactform7.com/loading-javascript-and-stylesheet-only-when-it-is-necessary/
-define('WPCF7_LOAD_JS', false);
-define('WPCF7_LOAD_CSS', false);
+const WPCF7_LOAD_JS = false;
+const WPCF7_LOAD_CSS = false;
 
 // Wordpress content
-define('WP_CONTENT_DIR', __DIR__.'/wp-content');
-define('WP_CONTENT_URL', '/wp-content');
+const WP_CONTENT_DIR = __DIR__ . '/wp-content';
+const WP_CONTENT_URL = '/wp-content';
 
 // Absolute path to the WordPress directory
 if (!defined('ABSPATH')) {
@@ -74,10 +74,10 @@ if ('127.0.0.1' == $_SERVER['REMOTE_ADDR']) {
     define('FS_METHOD', 'direct');
 }
 
-// Wordpress setting
-define('WP_POST_REVISIONS', 10);	// Specify maximum number of Revisions
-define('MEDIA_TRASH', true);		// Media Trash
-define('EMPTY_TRASH_DAYS', 30);		// Trash Days
+// WordPress setting
+const WP_POST_REVISIONS = 10;    // Specify maximum number of Revisions
+const MEDIA_TRASH = true;        // Media Trash
+const EMPTY_TRASH_DAYS = 30;        // Trash Days
 
 /*
  * Alternate cron method ( http://wordpress-hackers.1065353.n5.nabble.com/ALTERNATE-WP-CRON-Is-it-worth-it-td39843.html )
@@ -97,7 +97,7 @@ define('EMPTY_TRASH_DAYS', 30);		// Trash Days
  *
  *  There is an extremely thin chance that the doing_wp_cron could show up
  *  in the link for a search engine bot, however, WordPress includes the
- *  canonical link in the meta data by default to prevent that additional
+ *  canonical link in the metadata by default to prevent that additional
  *  query variable from being an issue in search results. No SEO impact.
  */
-// define('ALTERNATE_WP_CRON', true); // By default: no use, so false
+// const ALTERNATE_WP_CRON = true; // By default, no use so false

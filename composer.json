@@ -9,14 +9,14 @@
   ],
   "require": {
     "php": ">=7.4.0",
-    "fancyguy/webroot-installer": "1.1.0",
-    "johnpbloch/wordpress": "5.*",
-    "wpackagist-plugin/admin-menu-tree-page-view": "2.*",
+    "fancyguy/webroot-installer": "1.*",
+    "johnpbloch/wordpress": "6.*",
+    "wpackagist-plugin/admin-menu-tree-page-view": "*",
     "wpackagist-plugin/crop-thumbnails": "*",
-    "wpackagist-plugin/enhanced-media-library": "2.*",
-    "wpackagist-plugin/filenames-to-latin": "2.*",
-    "wpackagist-plugin/simple-login-lockdown": "1.*",
-    "wpackagist-plugin/wordpress-seo": "~16"
+    "wpackagist-plugin/enhanced-media-library": "*",
+    "wpackagist-plugin/filenames-to-latin": "*",
+    "wpackagist-plugin/simple-login-lockdown": "*",
+    "wpackagist-plugin/wordpress-seo": "*"
   },
   "require-dev": {
     "jgauthi/component_debug": "*",
@@ -27,6 +27,13 @@
   },
   "suggest": {
     "wp-cli/wp-cli-bundle": "WP-CLI is the command-line interface for WordPress, require for Makefile or local Dev."
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "fancyguy/webroot-installer": true,
+      "johnpbloch/wordpress-core-installer": true
+    }
   },
   "extra": {
     "wordpress-install-dir": "public/app",
