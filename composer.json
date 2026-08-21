@@ -8,10 +8,8 @@
     { "type": "composer", "url": "https://wpackagist.org" }
   ],
   "require": {
-    "php": ">=7.4.0",
-    "fancyguy/webroot-installer": "1.*",
-    "johnpbloch/wordpress": "6.*",
-    "wpackagist-plugin/admin-menu-tree-page-view": "*",
+    "php": ">=8.5.0",
+    "johnpbloch/wordpress": "7.*",
     "wpackagist-plugin/crop-thumbnails": "*",
     "wpackagist-plugin/enhanced-media-library": "*",
     "wpackagist-plugin/filenames-to-latin": "*",
@@ -31,7 +29,6 @@
   "config": {
     "allow-plugins": {
       "composer/installers": true,
-      "fancyguy/webroot-installer": true,
       "johnpbloch/wordpress-core-installer": true
     }
   },
@@ -42,5 +39,8 @@
       "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "public/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
     }
-  }
+  },
+    "authors": [
+        { "name": "Jgauthi", "homepage": "https://github.com/jgauthi", "role": "Developer" }
+    ]
 }
